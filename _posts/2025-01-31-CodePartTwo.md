@@ -188,7 +188,7 @@ if __name__ == "__main__":
 
 ## Shell as app and hash cracking
 after setting up listener it will give you shell.
-```zsh
+```
 app@codeparttwo:/opt$ whoami
 whoami
 app
@@ -227,7 +227,7 @@ And we get new creds.
 we can now ssh
 ## SSH as marco
 basic enum reveals he belongs to backups group and he can run the binary /usr/local/bin/npbackup-cli as root.
-```zsh
+```
 marco@codeparttwo:~$ ls
 backups  npbackup.conf  user.txt
 marco@codeparttwo:~$ id
