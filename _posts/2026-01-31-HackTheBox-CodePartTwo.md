@@ -1,6 +1,7 @@
 ---
 categories:
-- Hackthebox
+- HackTheBox
+- HackTheBox-Easy
 image:
   path: CodePartTwo.png
 layout: post
@@ -45,6 +46,7 @@ so the best move would be to check if it has a cve.
 And we do find it has a cve That is **CVE-2024-28397 js2py Sandbox Escape Exploit**
 the first repo i found was `https://github.com/Marven11/CVE-2024-28397-js2py-Sandbox-Escape`
 but it somehow got some errors but after looking around i did find another poc.
+
 ```python
 #!/usr/bin/env python3
 
