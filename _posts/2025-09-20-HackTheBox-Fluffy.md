@@ -515,6 +515,7 @@ Certipy v5.0.4 - by Oliver Lyak (ly4k)
 And we got admins hash.
 ### shell and root flag
 we can now utilise evil-winrm-py to get Root flag.
+
 ![image](Fluffy-20.png)
 
 Hope you enjoyed.Until The Next Writeup👋🙂.
