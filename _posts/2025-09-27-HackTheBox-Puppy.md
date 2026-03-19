@@ -53,7 +53,7 @@ Host script results:
 |   3.1.1: 
 |_    Message signing enabled and required
 | smb2-time: 
-|   date: 2026-02-26T13:49:51
+|   date: 2025-09-27T13:49:51
 |_  start_date: N/A
 ```
 From the ports open it very likely a domain controller

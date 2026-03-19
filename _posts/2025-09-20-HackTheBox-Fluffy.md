@@ -70,7 +70,7 @@ Host script results:
 |_    Message signing enabled and required  
 |_clock-skew: mean: 6h59m59s, deviation: 0s, median: 6h59m59s  
 | smb2-time:    
-|   date: 2026-02-27T12:49:02  
+|   date: 2025-06-27T12:49:02  
 |_  start_date: N/A
 ```
 From the ports open..Its a DC for the domain fluffy.htb Update the hosts file.
@@ -134,7 +134,7 @@ Loaded 1 password hash (netntlmv2, NTLMv2 C/R [MD4 HMAC-MD5 32/64])
 Will run 4 OpenMP threads  
 Press 'q' or Ctrl-C to abort, almost any other key for status  
 prometheusx-303  (p.agila)        
-1g 0:00:00:05 DONE (2026-02-27 11:05) 0.1901g/s 858914p/s 858914c/s 858914C/s proquis..programmercomputer  
+1g 0:00:00:05 DONE (2025-06-27 11:05) 0.1901g/s 858914p/s 858914c/s 858914C/s proquis..programmercomputer  
 Use the "--show --format=netntlmv2" options to display all of the cracked passwords reliably  
 Session completed.
 ```
@@ -150,44 +150,44 @@ So we can dump Domain info,ill be using rusthound-ce
 ```zsh
 rusthound-ce -u j.fleischman -p 'J0elTHEM4n1990!' --domain fluffy.htb --zip  
 ---------------------------------------------------  
-Initializing RustHound-CE at 11:18:35 on 02/27/26  
+Initializing RustHound-CE at 11:18:35 on 06/27/25  
 Powered by @g0h4n_0  
 ---------------------------------------------------  
   
-[2026-02-27T08:18:36Z INFO  rusthound_ce] Verbosity level: Info  
-[2026-02-27T08:18:36Z INFO  rusthound_ce] Collection method: All  
-[2026-02-27T08:18:36Z INFO  rusthound_ce::ldap] Connected to FLUFFY.HTB Active Directory!  
-[2026-02-27T08:18:36Z INFO  rusthound_ce::ldap] Starting data collection...  
-[2026-02-27T08:18:36Z INFO  rusthound_ce::ldap] Ldap filter : (objectClass=*)  
-[2026-02-27T08:18:40Z INFO  rusthound_ce::ldap] All data collected for NamingContext DC=fluffy,DC=htb  
-[2026-02-27T08:18:40Z INFO  rusthound_ce::ldap] Ldap filter : (objectClass=*)  
-[2026-02-27T08:18:44Z INFO  rusthound_ce::ldap] All data collected for NamingContext CN=Configuration,DC=fluffy,DC=htb  
-[2026-02-27T08:18:44Z INFO  rusthound_ce::ldap] Ldap filter : (objectClass=*)  
-[2026-02-27T08:18:50Z INFO  rusthound_ce::ldap] All data collected for NamingContext CN=Schema,CN=Configuration,DC=fluffy,DC=htb  
-[2026-02-27T08:18:50Z INFO  rusthound_ce::ldap] Ldap filter : (objectClass=*)  
-[2026-02-27T08:18:51Z INFO  rusthound_ce::ldap] All data collected for NamingContext DC=DomainDnsZones,DC=fluffy,DC=htb  
-[2026-02-27T08:18:51Z INFO  rusthound_ce::ldap] Ldap filter : (objectClass=*)  
-[2026-02-27T08:18:51Z INFO  rusthound_ce::ldap] All data collected for NamingContext DC=ForestDnsZones,DC=fluffy,DC=htb  
-[2026-02-27T08:18:51Z INFO  rusthound_ce::api] Starting the LDAP objects parsing...  
+[2025-06-27T08:18:36Z INFO  rusthound_ce] Verbosity level: Info  
+[2025-06-27T08:18:36Z INFO  rusthound_ce] Collection method: All  
+[2025-06-27T08:18:36Z INFO  rusthound_ce::ldap] Connected to FLUFFY.HTB Active Directory!  
+[2025-06-27T08:18:36Z INFO  rusthound_ce::ldap] Starting data collection...  
+[2025-06-27T08:18:36Z INFO  rusthound_ce::ldap] Ldap filter : (objectClass=*)  
+[2025-06-27T08:18:40Z INFO  rusthound_ce::ldap] All data collected for NamingContext DC=fluffy,DC=htb  
+[2025-06-27T08:18:40Z INFO  rusthound_ce::ldap] Ldap filter : (objectClass=*)  
+[2025-06-27T08:18:44Z INFO  rusthound_ce::ldap] All data collected for NamingContext CN=Configuration,DC=fluffy,DC=htb  
+[2025-06-27T08:18:44Z INFO  rusthound_ce::ldap] Ldap filter : (objectClass=*)  
+[2025-06-27T08:18:50Z INFO  rusthound_ce::ldap] All data collected for NamingContext CN=Schema,CN=Configuration,DC=fluffy,DC=htb  
+[2025-06-27T08:18:50Z INFO  rusthound_ce::ldap] Ldap filter : (objectClass=*)  
+[2025-06-27T08:18:51Z INFO  rusthound_ce::ldap] All data collected for NamingContext DC=DomainDnsZones,DC=fluffy,DC=htb  
+[2025-06-27T08:18:51Z INFO  rusthound_ce::ldap] Ldap filter : (objectClass=*)  
+[2025-06-27T08:18:51Z INFO  rusthound_ce::ldap] All data collected for NamingContext DC=ForestDnsZones,DC=fluffy,DC=htb  
+[2025-06-27T08:18:51Z INFO  rusthound_ce::api] Starting the LDAP objects parsing...  
 ⢀ Parsing LDAP objects: 1%                                                                                                                                                                       
-[2026-02-27T08:18:51Z INFO  rusthound_ce::objects::enterpriseca] Found 11 enabled certificate templates  
-[2026-02-27T08:18:51Z INFO  rusthound_ce::api] Parsing LDAP objects finished!  
-[2026-02-27T08:18:51Z INFO  rusthound_ce::json::checker] Starting checker to replace some values...  
-[2026-02-27T08:18:51Z INFO  rusthound_ce::json::checker] Checking and replacing some values finished!  
-[2026-02-27T08:18:51Z INFO  rusthound_ce::json::maker::common] 10 users parsed!  
-[2026-02-27T08:18:51Z INFO  rusthound_ce::json::maker::common] 62 groups parsed!  
-[2026-02-27T08:18:51Z INFO  rusthound_ce::json::maker::common] 1 computers parsed!  
-[2026-02-27T08:18:51Z INFO  rusthound_ce::json::maker::common] 1 ous parsed!  
-[2026-02-27T08:18:51Z INFO  rusthound_ce::json::maker::common] 1 domains parsed!  
-[2026-02-27T08:18:51Z INFO  rusthound_ce::json::maker::common] 2 gpos parsed!  
-[2026-02-27T08:18:51Z INFO  rusthound_ce::json::maker::common] 74 containers parsed!  
-[2026-02-27T08:18:51Z INFO  rusthound_ce::json::maker::common] 1 ntauthstores parsed!  
-[2026-02-27T08:18:51Z INFO  rusthound_ce::json::maker::common] 1 aiacas parsed!  
-[2026-02-27T08:18:51Z INFO  rusthound_ce::json::maker::common] 1 rootcas parsed!  
-[2026-02-27T08:18:51Z INFO  rusthound_ce::json::maker::common] 1 enterprisecas parsed!  
-[2026-02-27T08:18:51Z INFO  rusthound_ce::json::maker::common] 33 certtemplates parsed!  
-[2026-02-27T08:18:51Z INFO  rusthound_ce::json::maker::common] 3 issuancepolicies parsed!  
-[2026-02-27T08:18:51Z INFO  rusthound_ce::json::maker::common] .//20250627111851_fluffy-htb_rusthound-ce.zip created!  
+[2025-06-27T08:18:51Z INFO  rusthound_ce::objects::enterpriseca] Found 11 enabled certificate templates  
+[2025-06-27T08:18:51Z INFO  rusthound_ce::api] Parsing LDAP objects finished!  
+[2025-06-27T08:18:51Z INFO  rusthound_ce::json::checker] Starting checker to replace some values...  
+[2025-06-27T08:18:51Z INFO  rusthound_ce::json::checker] Checking and replacing some values finished!  
+[2025-06-27T08:18:51Z INFO  rusthound_ce::json::maker::common] 10 users parsed!  
+[2025-06-27T08:18:51Z INFO  rusthound_ce::json::maker::common] 62 groups parsed!  
+[2025-06-27T08:18:51Z INFO  rusthound_ce::json::maker::common] 1 computers parsed!  
+[2025-06-27T08:18:51Z INFO  rusthound_ce::json::maker::common] 1 ous parsed!  
+[2025-06-27T08:18:51Z INFO  rusthound_ce::json::maker::common] 1 domains parsed!  
+[2025-06-27T08:18:51Z INFO  rusthound_ce::json::maker::common] 2 gpos parsed!  
+[2025-06-27T08:18:51Z INFO  rusthound_ce::json::maker::common] 74 containers parsed!  
+[2025-06-27T08:18:51Z INFO  rusthound_ce::json::maker::common] 1 ntauthstores parsed!  
+[2025-06-27T08:18:51Z INFO  rusthound_ce::json::maker::common] 1 aiacas parsed!  
+[2025-06-27T08:18:51Z INFO  rusthound_ce::json::maker::common] 1 rootcas parsed!  
+[2025-06-27T08:18:51Z INFO  rusthound_ce::json::maker::common] 1 enterprisecas parsed!  
+[2025-06-27T08:18:51Z INFO  rusthound_ce::json::maker::common] 33 certtemplates parsed!  
+[2025-06-27T08:18:51Z INFO  rusthound_ce::json::maker::common] 3 issuancepolicies parsed!  
+[2025-06-27T08:18:51Z INFO  rusthound_ce::json::maker::common] .//20250627111851_fluffy-htb_rusthound-ce.zip created!  
   
 RustHound-CE Enumeration Completed at 11:18:51 on 06/27/25! Happy Graphing!
 ```
