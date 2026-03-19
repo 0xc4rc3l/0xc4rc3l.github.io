@@ -29,8 +29,8 @@ Kerberos is paranoid about time. By design, it rejects any authentication ticket
 HTB machines run in a shared cloud environment. Your attack box may have been suspended, snapshotted, or simply never synced against a reliable time source. Meanwhile, the target DC keeps ticking on its own schedule. The gap quietly grows — until Kerberos pulls the handbrake.
 
 ---
-in This example ill be using htb's Administrator machine and from running a command to sk for kerberos ticket we ar emet with the error `Kerberos SessionError: KRB_AP_ERR_SKEW(Clock skew too great)`
-As we can see tryign to ask for ticket as michael backfires bcoz of the clock skew issue.
+in This example ill be using htb's Administrator machine and from running a command to ask for kerberos ticket we are met with the error `Kerberos SessionError: KRB_AP_ERR_SKEW(Clock skew too great)`
+As we can see trying to ask for ticket as michael backfires because of the clock skew issue.
 ![image](clock_skew-1.png)
 ### The fix
 #### Step 1 — Disable NTP on your attack box
@@ -48,7 +48,8 @@ This forces your clock to match the Domain Controller's exactly. The `-n` flag u
 
 ## After the fix
 Re-run your Kerberos attack. The skew is gone, tickets are valid, and the DC will happily hand out TGTs.
-in our case using michael to ask for tgt
+
+In our case using michael to ask for tgt
 ![image](clock_skew-2.png)
 And we do get it.
 
