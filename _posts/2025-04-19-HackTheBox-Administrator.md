@@ -114,14 +114,14 @@ And straight off the bat we see she has outbound object control over michael and
 we could do a shadow creds attack but adcs isnt present as we can see from nxc
 ![image](Administrator-5.png)
 Targeted kerberoast might give us a hash that we cannot crack,
-So our best bet is changing password..very not stealthy especially in an enterprise or monitored network.
+So our best bet is changing password..very not stealthy especially in an enterprise or monitored network tho.
 so we'll change the password and then ask for kerberos ticket for persistence.
 ```zsh
 bloodyAD --host DC.administrator.htb -u Olivia -p ichliebedich set password michael P4ssw0rd@254  
 [+] Password changed successfully!
 ```
 Since to get ticket we'll utilise kerberos.Make sure to sync time with DC.
-Having issues with dc time syncing..Check out the methos i use [[here]]
+Having issues with dc time syncing..Check out the methos i use [here](https://0xc4rc3l.github.io/posts/Fixing-Kerberos-Clock-Skew/)
 and we can ask for michaels tgt.
 ![image](Administrator-8.png)
 ## Michael and Benjamin
