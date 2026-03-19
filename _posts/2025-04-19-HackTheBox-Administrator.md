@@ -121,7 +121,8 @@ bloodyAD --host DC.administrator.htb -u Olivia -p ichliebedich set password mich
 [+] Password changed successfully!
 ```
 Since to get ticket we'll utilise kerberos.Make sure to sync time with DC.
-Having issues with dc time syncing..Check out the methos i use [here](https://0xc4rc3l.github.io/posts/Fixing-Kerberos-Clock-Skew/)
+Having issues with dc time syncing?
+Check out the method i use [here](https://0xc4rc3l.github.io/posts/Fixing-Kerberos-Clock-Skew/)
 and we can ask for michaels tgt.
 ![image](Administrator-8.png)
 ## Michael and Benjamin
