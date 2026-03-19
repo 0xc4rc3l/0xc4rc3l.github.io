@@ -1,6 +1,5 @@
 ---
 categories:
-- HackTheBox
 - HackTheBox-Medium
 - Active Directory Exploitation Track
 image:
