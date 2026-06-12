@@ -22,13 +22,13 @@ description: Red team trainee focused on AD exploitation, C2 frameworks, and rea
 
 # Fill in the protocol & hostname for your site.
 # E.g. 'https://username.github.io', note that it does not end with a '/'.
-url: "https://0xc4rc3l.github.io"
+url: "https://0xc4rc3l.dev"
 
 github:
   username: 0xc4rc3l # change to your GitHub username
 
 twitter:
-  username: 0xc4rc3l # change to your Twitter username
+  username: 0x3v4siv3 # change to your Twitter username
 
 social:
   # Change to your full name.
@@ -37,7 +37,7 @@ social:
   email: example@domain.com # change to your email address
   links:
     # The first element serves as the copyright owner's link
-    - https://twitter.com/username # change to your Twitter homepage
+    - https://x.com/0x3v4siv3 # change to your Twitter homepage
     - https://github.com/0xc4rc3l # change to your GitHub homepage
     # Uncomment below to add more social links
     # - https://www.facebook.com/username
